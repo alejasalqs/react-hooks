@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 // Un custom hook es igual que una funcion normal de react
 export const useCounter = (initialState = 10) => {
   // vamos a centralizar la logica de un contador en este hook
