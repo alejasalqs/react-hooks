@@ -6,7 +6,7 @@ export const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-sm navbar-light bg-light">
       <div className="container-fluid">
-        <NavLink className="navbar-brand" to="/">
+        <NavLink className="navbar-brand" to="usecontext/">
           useContext Hook
         </NavLink>
         <button
@@ -27,7 +27,7 @@ export const NavBar = () => {
               activeClassName="active"
               className="nav-link active"
               aria-current="page"
-              to="/"
+              to="usecontext/"
             >
               Home
             </NavLink>
@@ -36,7 +36,7 @@ export const NavBar = () => {
               activeClassName="active"
               className="nav-link active"
               aria-current="page"
-              to="/about"
+              to="usecontext/about"
             >
               About
             </NavLink>
@@ -45,7 +45,7 @@ export const NavBar = () => {
               activeClassName="active"
               className="nav-link active"
               aria-current="page"
-              to="/login"
+              to="usecontext/login"
             >
               Login
             </NavLink>

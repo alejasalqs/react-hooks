@@ -15,18 +15,16 @@ export const AppRouter = () => {
   // La ruta mas general va hasta abajo
   // se recomienda usar exact
   return (
-    <Router>
-      <>
-        <NavBar />
-        <div className="container">
-          <Switch>
-            <Route exact path="/about" component={AboutScreen} />
-            <Route exact path="/login" component={LoginScreen} />
-            <Route exact path="/" component={HomeScreen} />
-            <Redirect to="/" />
-          </Switch>
-        </div>
-      </>
-    </Router>
+    <>
+      <NavBar />
+      <div className="container">
+        <Switch>
+          <Route exact path="usecontext/about" component={AboutScreen} />
+          <Route exact path="usecontext/login" component={LoginScreen} />
+          <Route exact path="usecontext/" component={HomeScreen} />
+          <Redirect to="/" />
+        </Switch>
+      </div>
+    </>
   );
 };
