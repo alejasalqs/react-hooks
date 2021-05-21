@@ -24,20 +24,28 @@ export const useFetch = (url) => {
       error: null,
     });
     // aqui no se puede usar async/await
-    fetch(url).then((resp) => {
-      resp.json().then((data) => {
-        if (isMounted.current) {
-          // Si el componente esta montado ejecuta
-          setState({
-            loading: false,
-            error: null,
-            data,
-          });
-        } else {
-          console.log("setState no se llama");
-        }
+    fetch(url)
+      .then((resp) => {
+        resp.json().then((data) => {
+          if (isMounted.current) {
+            // Si el componente esta montado ejecuta
+            setState({
+              loading: false,
+              error: null,
+              data,
+            });
+          } else {
+            console.log("setState no se llama");
+          }
+        });
+      })
+      .catch((e) => {
+        setState({
+          data: null,
+          loading: false,
+          error: "No se pudo cargar la información",
+        });
       });
-    });
   }, [url]); // Se ejecuta cuando el URL cambia
 
   return state;

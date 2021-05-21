@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el archivo <MultipleCustomHooks /> Debe de mostrar la infomación  1`] = `ShallowWrapper {}`;
+
+exports[`Pruebas en el archivo <MultipleCustomHooks /> Debe de mostrarse correctamente  1`] = `ShallowWrapper {}`;
